@@ -1,0 +1,19 @@
+{
+  "name": "codegen-api",
+  "version": "1.0.0",
+  "description": "Code generation API with Fastify",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "fastify": "^4.24.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.2.2"
+  }
+}
