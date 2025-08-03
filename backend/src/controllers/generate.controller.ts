@@ -1,12 +1,13 @@
 import { FastifyReply, FastifyRequest } from "fastify";
 import { generatorService } from "../services/generator.service";
-import { GenerateRequest } from "../types";
+import type { GenerateRequest } from "../types";
 
 export const generateController = async (
   request: FastifyRequest<{ Body: GenerateRequest }>,
   reply: FastifyReply
 ) => {
   try {
+    console.log("check ", request.body);
     const { input, format } = request.body;
 
     if (!input || !format) {
